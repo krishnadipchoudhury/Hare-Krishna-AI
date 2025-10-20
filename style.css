@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');  
+
+body {  
+  margin: 0;  
+  font-family: 'Inter', sans-serif;  
+  display: flex;  
+  flex-direction: column;  
+  height: 100vh;  
+  background: #f5f5f5;  
+  color: #333;  
+}  
+
+h1 {  
+  text-align: center;  
+  padding: 10px;  
+  margin: 0;  
+  background-color: #10a37f; /* Original Green */
+  font-size: 22px;  
+  font-weight: 600;  
+  letter-spacing: 1px;  
+  color: #fff;  
+}  
+
+#chatbox {  
+  flex: 1;  
+  padding: 15px;  
+  overflow-y: auto;  
+  display: flex;  
+  flex-direction: column;  
+  gap: 10px;  
+  background-color: #e5e5e5;  
+}  
+
+.message {  
+  padding: 10px 15px;  
+  border-radius: 12px;  
+  max-width: 80%;  
+  font-size: 14px;  
+  line-height: 1.4;  
+  opacity: 0;  
+  transform: translateY(10px);  
+  animation: fadeIn 0.3s forwards;  
+  word-wrap: break-word;  
+  white-space: pre-wrap;  
+}  
+
+.user {  
+  background-color: #10a37f; /* Original Green */
+  color: #fff;  
+  align-self: flex-end;  
+  border-bottom-right-radius: 0;  
+}  
+
+.ai {  
+  background-color: #fff;  
+  color: #000;  
+  align-self: flex-start;  
+  border: 1px solid #10a37f; /* Original Green Border */
+  border-bottom-left-radius: 0;  
+}  
+
+@keyframes fadeIn {  
+  to { opacity: 1; transform: translateY(0); }  
+}  
+
+/* --- INPUT AREA STYLES (REVERTED & MODIFIED) --- */
+
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ccc; 
+}
+
+#userInput {  
+  flex: 1; 
+  padding: 12px 15px;  
+  margin: 0; 
+  margin-right: 10px; 
+  border-radius: 25px;  
+  border: 2px solid #10a37f; /* Original border style */
+  outline: none;  
+  font-size: 15px;  
+  transition: border-color 0.2s;
+}
+
+#userInput:focus {
+  border-color: #0d8a6a;
+}
+
+/* New styles for the Send Button (using original color scheme) */
+#sendBtn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: #10a37f; /* Original Green */
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  padding: 0; 
+}
+
+#sendBtn:hover {
+  background-color: #0d8a6a; /* Original hover color */
+}
+
+#sendBtn svg {
+  transform: translateX(1px);
+}
